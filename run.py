@@ -39,7 +39,7 @@ def main():
     if value == 1:
         os.system('cls' if os.name == 'nt' else 'clear')
         print("Starting")
-        os.system('python3 goblin_dev.py')
+        os.system('python3 goblins/goblin_dev.py')
     elif value == 2:
         os.system('notepad config.json' if os.name == 'nt' else 'nano config.json')
         main()

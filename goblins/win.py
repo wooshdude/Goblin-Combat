@@ -21,19 +21,19 @@ logo = '''
 # logo = logo.replace(',', ' ')
 # logo = logo.replace('/', ' ')
 
-print(logo)
 
-print('//////////////////////////////////')
-print('     WELCOME TO GOBLIN COMBAT!')
-print('//////////////////////////////////\n')
+def main():
+    print(logo)
 
-print('Select an option')
-print('[1] Start')
-print('[2] Config')
-print('[3] Credits')
+    print('//////////////////////////////////')
+    print('     WELCOME TO GOBLIN COMBAT!')
+    print('//////////////////////////////////\n')
 
+    print('Select an option')
+    print('[1] Start')
+    print('[2] Config')
+    print('[3] Credits')
 
-def gameLoop():
     value = int(input('\nEnter selection: '))
 
     if value == 1:
@@ -41,6 +41,18 @@ def gameLoop():
         print("Starting")
         os.system('python3 goblin_dev.py')
     elif value == 2:
-        print('Please check')
+        os.system('../config.json')
+    elif value == 3:
+        credits()
 
-gameLoop()
+
+def credits():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    f = open('../credits.txt')
+    for line in f.readlines():
+        print(line)
+        time.sleep(1)
+    f.close()
+    main()
+
+main()

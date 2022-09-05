@@ -1,0 +1,26 @@
+{
+    "name": "Beach Goblin",
+    "id": "beach",
+    "health": 24,
+    "attack": 1,
+    "magic": 2,
+    "defence": 3,
+    "magic_defence": 3,
+    "speed": 3,
+    "spells": [
+        {
+            "name": "Salt Splash",
+            "flavor": "Blind your opponents with a splash of salt water",
+            "healing": 5,
+            "damage": 5,
+            "cooldown": 3
+        },
+        {
+            "name": "Sand Castle",
+            "flavor": "Quickly erect a sand castle to defend you and your allies",
+            "healing": 8,
+            "damage": 2,
+            "cooldown": 8
+        }
+    ]
+}

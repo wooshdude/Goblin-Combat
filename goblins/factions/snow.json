@@ -1,0 +1,26 @@
+{
+    "name": "Snow Goblin",
+    "id": "snow",
+    "health": 36,
+    "attack": 1,
+    "magic": 3,
+    "defence": 2,
+    "magic_defence": 4,
+    "speed": 1,
+    "spells": [
+        {
+            "name": "Freezing Touch",
+            "flavor": "Causes your enemies to slow down and freeze.",
+            "healing": 0,
+            "damage": 3,
+            "cooldown": 6
+        },
+        {
+            "name": "Ice Spikes",
+            "flavor": "Summon a barage of ice daggers to strike your enemy with.",
+            "healing": 0,
+            "damage": 6,
+            "cooldown": 8
+        }
+    ]
+}

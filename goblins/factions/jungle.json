@@ -1,0 +1,26 @@
+{
+    "name": "Jungle Goblin",
+    "id": "jungle",
+    "health": 24,
+    "attack": 2,
+    "magic": 1,
+    "defence": 3,
+    "magic_defence": 2,
+    "speed": 4,
+    "spells": [
+        {
+            "name": "Blowgun",
+            "flavor": "Fire a rapid volley of poison darts.",
+            "healing": 0,
+            "damage": 5,
+            "cooldown": 5
+        },
+        {
+            "name": "Machette",
+            "flavor": "Used to cleave through more than just jungle brush.",
+            "healing": 0,
+            "damage": 8,
+            "cooldown": 4
+        }
+    ]
+}

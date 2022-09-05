@@ -1,0 +1,26 @@
+{
+    "name": "Desert Goblin",
+    "id": "desert",
+    "health": 18,
+    "attack": 2,
+    "magic": 3,
+    "defence": 1,
+    "magic_defence": 2,
+    "speed": 3,
+    "spells": [
+        {
+            "name": "Crushing Sands",
+            "flavor": "Envelop your enemies in a cocoon of sand and squeeze.",
+            "healing": 0,
+            "damage": 10,
+            "cooldown": 10
+        },
+        {
+            "name": "Sand Wave",
+            "flavor": "Send a wave of sand that shreds your enemies.",
+            "healing": 0,
+            "damage": 8,
+            "cooldown": 8
+        }
+    ]
+}

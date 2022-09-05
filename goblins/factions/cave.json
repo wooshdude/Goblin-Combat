@@ -1,0 +1,26 @@
+{
+    "name": "Cave Goblin",
+    "id": "cave",
+    "health": 36,
+    "attack": 3,
+    "magic": 1,
+    "defence": 3,
+    "magic_defence": 1,
+    "speed": 1,
+    "spells": [
+        {
+            "name": "Ooga Oo",
+            "flavor": "Bad make gone",
+            "healing": 0,
+            "damage": 10,
+            "cooldown": 10
+        },
+        {
+            "name": "Umga Um",
+            "flavor": "AWOAWOAWOAAA",
+            "healing": 0,
+            "damage": 15,
+            "cooldown": 20
+        }
+    ]
+}

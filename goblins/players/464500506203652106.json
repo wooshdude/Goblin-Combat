@@ -1,0 +1,23 @@
+{
+    "name": "ruppa",
+    "faction": "desert",
+    "level": 1,
+    "experience": 0,
+    "max_hit_points": 18,
+    "hit_points": 18,
+    "weapon": "unarmed",
+    "armor": "unarmored",
+    "trinket": "none",
+    "inventory": [
+        "unarmed",
+        "unarmored",
+        "none"
+    ],
+    "cosmetics": [
+        {
+            "hat": 0,
+            "shirt": 0,
+            "pants": 0
+        }
+    ]
+}

@@ -44,6 +44,10 @@ dungeonMsg = None
 # total list of players
 players = {}
 
+# config
+with open("config.json") as file:
+    serverData = json.load(file)
+
 
 @client.event
 async def on_ready():
@@ -85,7 +89,7 @@ async def summonDungeon():
 
     view = DungeonInvite()
 
-    channel = client.get_channel(1001391464900722779)
+    channel = client.get_channel(serverData['game_channel_id'])
     dungeonMsg = await channel.send(view=view, embed=em)
 
 
@@ -421,7 +425,7 @@ async def profileImg(ctx):
     drawProfile(players[ctx.author.id], ctx.author.avatar.url)
     prof = discord.Embed(color=discord.colour.Color.dark_purple())
     file = discord.File("profile-export.png")
-    img = await client.get_channel(1001238232094224444).send(file=file)
+    img = await client.get_channel(serverData['screen_updates_id']).send(file=file)
     prof.set_image(url=img.attachments[0].url)
 
     return prof
@@ -456,7 +460,7 @@ async def infoImg(item, type):
 
     drawInfo(item, type)
     file = discord.File(f"item-enlarge.png")
-    img = await client.get_channel(1001238232094224444).send(file=file)
+    img = await client.get_channel(serverData['screen_updates_id']).send(file=file)
     em.set_thumbnail(url=img.attachments[0].url)
 
     return em
@@ -814,7 +818,7 @@ async def bossFight():
 
     drawBoss(currentBoss)
     file = discord.File("boss-screen-export.png")
-    img = await client.get_channel(1001238232094224444).send(file=file)
+    img = await client.get_channel(serverData['screen_updates_id']).send(file=file)
     em.set_image(url=img.attachments[0].url)
 
     return em, file
@@ -933,7 +937,7 @@ async def drawTheScreen():
 
     draw(playing[0], playing[1])
     file = discord.File("final.png")
-    img = await client.get_channel(1001238232094224444).send(file=file)
+    img = await client.get_channel(serverData['screen_updates_id']).send(file=file)
     em.set_image(url=img.attachments[0].url)
 
     return em, file
@@ -1097,12 +1101,8 @@ async def menu(ctx):
     await ctx.send(embed=em)
 
 
-# test config
-with open("key.json") as file:
-    serverData = json.load(file)
-
 try:
-    client.run(serverData['key'])
+    client.run(serverData['server_id'])
 except:
     print('Unauthorized key. Please double check you have the correct key.')
 

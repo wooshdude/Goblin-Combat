@@ -41,14 +41,15 @@ def main():
         print("Starting")
         os.system('python3 goblin_dev.py')
     elif value == 2:
-        os.system('../config.json')
+        os.system('notepad config.json' if os.name == 'nt' else 'nano config.json')
+        main()
     elif value == 3:
         credits()
 
 
 def credits():
     os.system('cls' if os.name == 'nt' else 'clear')
-    f = open('../credits.txt')
+    f = open('credits.txt')
     for line in f.readlines():
         print(line)
         time.sleep(1)
